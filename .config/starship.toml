@@ -1,0 +1,36 @@
+# Based upon Chris Titus's starship.toml
+format = """
+[░▒▓](fg:#093361 bg:#1793D100)\
+[ CLI](fg:#FFFFFF bg:#093361)\
+[](fg:#093361 bg:#181818)\
+$username\
+[](fg:#181818 bg:#38494a)\
+[](fg:#38494a bg:#222222)\
+$time\
+[](fg:#222222 bg:#48595A)\
+[](fg:#48595A bg:#303030)\
+$directory\
+[](fg:#303030 bg:#58696A)\
+[](fg:#58696a bg:#30303000)\
+[> ](fg:#ffffff bg:#30303000)\
+"""
+command_timeout = 5000
+
+# Indivdial Modification of Units:
+[username]
+show_always = true
+style_user = "bg:#181818"
+style_root = "bg:#3B4252"
+format = '[ $user ]($style)'
+
+[time]
+disabled = false
+time_format = "%I:%M %p" #Examples: "2:47 PM" , "6:48 AM"
+style = "bg:#222222"
+format = '[ $time ]($style)'
+
+[directory]
+style = "bg:#303030"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
