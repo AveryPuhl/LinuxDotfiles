@@ -2,7 +2,6 @@
 
 [[ $- != *i* ]] && return
 
-alias update='pacman -Syu'
 alias kill-waybar='~/bin/kill-waybar'
 alias kill-firefox='~/bin/kill-firefox'
 alias kill-steam='~/bin/kill-steam'
