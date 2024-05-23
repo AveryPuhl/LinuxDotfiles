@@ -1,22 +1,16 @@
 # Avery Puhl's Dotfiles
-This is a personal repository for my .config directories and .*rc shell files.
-If you use them I HIGHLY reccomend you tweak them to your liking.
-### You are absolutley welcome to clone, use, and modify this Repository.
-I really do not care what you do with these files. (e.g., claim them, share them, reupload to GitHub).
-Do whatever you please with this repository. I encourage it.
-##### Credit is NOT mandatory, but is highly appreciated.
-My linux systems are rather basic, and do not stem very far from default configs.
-You'll find various comments throughout my configs labeling details.
-These stem from previous versions/users of these files, myself included.
-### Expect incompatibilities on non-Archlinux systems!
-I use **vanilla Arch linux**, and have not tested nor optimized for use on other distributions.
-I primarily use Hyprland, which may not be your perferred Compositor/Enviroment.
-### If you happen to load my Hyprland config before modifying:
-~ SUPER+Home to launch a Kitty terminal.
-~ SUPER+delete to logout back to your tty/Display Manager.
-~ SUPER+T to open Firefox.
-## Previews
-# Starship
-![Starship-Preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/94e6bfe3-a4f6-4dcf-9507-f7da97e86148)
-# Waybar
-![Waybar-Preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/900c7741-d29f-4665-8d6f-57e881197a9d)
+This is a personal repository for my ideal system dotfiles.  
+If you use any of them I **HIGHLY** encourage you tweak these files to your liking.  
+## Expect incompatibilities on non-Archlinux systems!
+I use regular **[Arch linux](https://archlinux.org/)**, and have not tested nor optimized for use on other distributions.  
+This config is centered entirely around **[Hyprland](https://hyprland.org/)**.  
+# Previews
+### Starship - [Archlinux Respoitory](https://archlinux.org/packages/extra/x86_64/starship/) OR [Official Website](https://starship.rs/)
+![starship-preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/90bbbd94-9866-4e09-8914-b0bfcf4a70df)
+### Fastfetch - [Archlinux Repository](https://archlinux.org/packages/extra/x86_64/fastfetch/) OR [Github Repository](https://github.com/fastfetch-cli/fastfetch)
+![fastfetch-preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/e4ad73eb-0e71-4d24-a37c-d92fd5520ac5)
+### Waybar - [Archlinux Repository](https://archlinux.org/packages/extra/x86_64/waybar/) OR [GitHub Repository](https://github.com/Alexays/Waybar)
+![waybar-preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/560a96aa-4fa8-4094-9039-70116268337d)
+### Rofi Wayland - [Archlinux Repository](https://archlinux.org/packages/extra/x86_64/rofi-wayland/)
+Theme is "fullscreen-preview by Dave Davenport". You can change it with the "rofi-theme-selector" command.  
+![rofi-preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/a313c4c4-aa25-45c3-8feb-326e24f0502a)
