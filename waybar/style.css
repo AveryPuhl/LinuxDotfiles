@@ -1,0 +1,253 @@
+	/* Keyframes */
+
+@keyframes blink-critical {
+	to {
+		/*color: @white;*/
+		background-color: @critical;
+	}
+}
+
+	/* Colors */
+
+@define-color drkred    #6e4d4d;
+@define-color red	#cc241d;
+@define-color brred	#fb4934;
+
+@define-color drkyellow #6e6b4d;
+@define-color yellow	#d79921;
+@define-color bryellow	#fabd2f;
+
+@define-color drkgreen  #222b20;
+@define-color green	#98971a;
+@define-color brgreen	#b8bb26;
+
+@define-color drkaqua   #4d6e4e;
+@define-color aqua	#689d6a;
+@define-color braqua	#8ec07c;
+
+@define-color drkblue   #4d516e;
+@define-color blue	#458588;
+@define-color brblue	#83a598;
+
+@define-color drkpurple #6a4d6e;
+@define-color purple	#b16286;
+@define-color brpurple	#d3869b;
+
+@define-color black	#000000;
+@define-color drkergray #181818;
+@define-color drkgray	#282828;
+@define-color gray	#a89984;
+@define-color brgray	#928374;
+@define-color white	#FFFFFF;
+
+@define-color drkarchlinux #093361;
+@define-color archlinux #1793D1;
+
+@define-color arrow	@drkgray;
+@define-color window	@drkergray;
+@define-color warning	@yellow;
+@define-color critical	@red;
+@define-color mode	@blue;
+@define-color unfocused	@black;
+@define-color focused	@archlinux;
+@define-color inactive	@purple;
+@define-color layout	@black;
+@define-color network	@drkgray;
+@define-color sound	@drkgray;
+@define-color memory	@drkgray;
+@define-color date	@drkgray;
+@define-color user	@drkgray;
+@define-color time	@drkgray;
+@define-color temperature @drkgray;
+@define-color cpu	@drkgray;
+@define-color battery	@drkgray;
+@define-color tray	@drkgray;
+
+/* Reset all styles */
+* {
+	border: @white;
+	border-radius: 4px;
+	min-height: 15px;
+	margin: 0px;
+	padding: 1px;
+	box-shadow: @black;
+	text-shadow: @black;
+	-gtk-icon-shadow: @black;
+}
+
+/* The whole bar */
+#waybar {
+	background: rgba(18, 18, 18, 0.75);
+	color: @white;
+	font-family: Iosevka;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#language,
+#memory,
+#mode,
+s#network,
+#pulseaudio,
+#temperature,
+#tray,
+#backlight,
+#idle_inhibitor,
+#disk,
+#user,
+#mpris {
+	padding-left: 6pt;
+	padding-right: 6pt;
+}
+
+/* Each critical module */
+#mode,
+#memory.critical,
+#cpu.critical,
+#temperature.critical,
+#battery.critical.discharging {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-name: blink-critical;
+	animation-duration: 1s;
+}
+
+/* Each warning */
+#network.disconnected,
+#memory.warning,
+#cpu.warning,
+#temperature.warning,
+#battery.warning.discharging {
+	color: @warning;
+}
+
+#mode {
+	color: @white;
+	background: @mode;
+}
+
+/* Workspaces stuff */
+#workspaces button {
+	font-weight: bold;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	color: @white;
+	background: @drkergray;
+}
+
+/* Inactive (on unfocused output) */
+#workspaces button.visible {
+	color: @white;
+	background: @inactive;
+}
+
+/* Active (on focused output) */
+#workspaces button.active {
+	color: @black;
+	background: @focused;
+}
+
+/* Contains an urgent window */
+#workspaces button.urgent {
+	color: @black;
+	background: @warning;
+}
+
+/* Style when cursor is on the button */
+#workspaces button:hover {
+	background: @white;
+	color: @archlinux;
+}
+
+#window {
+	background: @drkergray;
+	color: @white;
+}
+
+#pulseaudio {
+	background: @drkergray;
+	color: @white;
+}
+
+#network {
+	background: @network;
+	color: @white;
+}
+
+#memory {
+
+	background: @memory;
+	color: @white;
+}
+
+#cpu {
+	background: @drkergray;
+	color: @white;
+}
+
+#temperature {
+	background: @temperature;
+	color: @white;
+}
+
+#language {
+	background: @layout;
+	color: @white;
+}
+
+#battery {
+	background: @drkergray;
+	color: @white;
+}
+
+#tray {
+	background: @drkergray;
+        color: @white;
+}
+
+#user {
+	background: @user;
+        color: @white;
+}
+
+#clock {
+	background: @time;
+	color: @white;
+}
+
+#custom-start {
+	font-size: 11pt;
+	color: @white;
+	background: @drkergray;
+}
+
+#custom-arrowL1 {
+	font-size: 11pt;
+	color: @arrow;
+	background: transparent;
+}
+
+#custom-arrowR1 {
+	font-size: 11pt;
+	color: @arrow;
+	background: transparent;
+}
+
+#custom-arrowM1 {
+	font-size: 13pt;
+	color: @arrow;
+	margin-left: 12pt;
+	background: transparent;
+}
+
+#custom-arrowM2 {
+	font-size: 13pt;
+	color: @arrow;
+	margin-right: 12pt;
+	background: transparent;
+}
