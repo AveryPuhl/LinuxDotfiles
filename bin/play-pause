@@ -1,0 +1,5 @@
+#!/bin/bash
+# this pause is giving time for your music player to start up. feel free to remove it.
+sleep 1.75
+playerctl play-pause @DEFAULT_AUDIO_SINK@ toggle
+exit

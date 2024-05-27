@@ -1,0 +1,4 @@
+#!/bin/bash
+pidof_firefox=$(pidof firefox)
+kill -9 $pidof_firefox
+exit
