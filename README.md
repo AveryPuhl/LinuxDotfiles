@@ -1,5 +1,5 @@
 # Avery Puhl's Dotfiles
-This is a personal repository for my ideal system dotfiles.  
+This is a personal repository for my ideal system dotfiles. Mainly simple bash scripts and .conf files.  
 If you use any of them I **HIGHLY** encourage you tweak these files to your liking.  
 ## Expect incompatibilities on non-Archlinux systems!
 I use regular **[Arch linux](https://archlinux.org/)**, and have not tested nor optimized for use on other distributions.  
