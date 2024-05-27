@@ -1,4 +1,4 @@
-# Based upon Chris Titus's starship.toml
+# The literal placement of components from left to right.
 format = """
 [░▒▓](fg:#093361 bg:#1793D100)\
 [ CLI](fg:#FFFFFF bg:#093361)\
@@ -16,7 +16,7 @@ $directory\
 """
 command_timeout = 5000
 
-# Indivdial Modification of Units:
+# Indivdial Modification of Units
 [username]
 show_always = true
 style_user = "bg:#181818"
@@ -25,7 +25,7 @@ format = '[ $user ]($style)'
 
 [time]
 disabled = false
-time_format = "%I:%M %p" #Examples: "2:47 PM" , "6:48 AM"
+time_format = "%I:%M %p"
 style = "bg:#222222"
 format = '[ $time ]($style)'
 
