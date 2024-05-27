@@ -2,10 +2,16 @@
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+alias download-audio='yt-dlp -x --audio-format best'
+alias download-audio-mp3='yt-dlp -x --audio-format mp3'
+alias download-audio-flac='yt-dlp -x --audio-format flac'
+alias download-audio-opus='yt-dlp -x --audio-format opus'
+alias sudo='sudo '
 alias kill-waybar='~/bin/kill-waybar'
 alias kill-firefox='~/bin/kill-firefox'
 alias kill-steam='~/bin/kill-steam'
-alias catcputemp='~/bin/echo-cpu-temp.sh'
+alias catcputemp='~/bin/echo-cpu-temp'
+alias catbattery='~/bin/echo-battery-microwattage'
 alias untar='tar -xvzf'
 alias ll='ls -al'
 alias ls='ls --color=auto'
