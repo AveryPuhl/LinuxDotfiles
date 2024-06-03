@@ -1,12 +1,12 @@
 #!/bin/bash
-echo " " > ~/.config/hypr/hyprpaper.conf
-echo "preload = ~/.config/wallpaper/W1.jpg" >> ~/.config/hypr/hyprpaper.conf
-echo "preload = ~/.config/wallpaper/W2.jpg" >> ~/.config/hypr/hyprpaper.conf
-echo "preload = ~/.config/wallpaper/W3.jpg" >> ~/.config/hypr/hyprpaper.conf
-echo "preload = ~/.config/wallpaper/W4.jpg" >> ~/.config/hypr/hyprpaper.conf
-echo "preload = ~/.config/wallpaper/W5.jpg" >> ~/.config/hypr/hyprpaper.conf
-echo "preload = ~/.config/wallpaper/W6.jpg" >> ~/.config/hypr/hyprpaper.conf
-echo "preload = ~/.config/wallpaper/W7.jpg" >> ~/.config/hypr/hyprpaper.conf
-echo "wallpaper = eDP-1, ~/.config/wallpaper/W$((1 + $RANDOM % 7)).jpg" >> ~/.config/hypr/hyprpaper.conf
+echo " " > /home/avery/.config/hypr/hyprpaper.conf
+echo "preload = /home/avery/.config/wallpaper/W1.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+echo "preload = /home/avery/.config/wallpaper/W2.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+echo "preload = /home/avery/.config/wallpaper/W3.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+echo "preload = /home/avery/.config/wallpaper/W4.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+echo "preload = /home/avery/.config/wallpaper/W5.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+echo "preload = /home/avery/.config/wallpaper/W6.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+echo "preload = /home/avery/.config/wallpaper/W7.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+echo "wallpaper = eDP-1, /home/avery/.config/wallpaper/W$((1 + $RANDOM % 7)).jpg" >> /home/avery/.config/hypr/hyprpaper.conf
 hyprpaper
 
