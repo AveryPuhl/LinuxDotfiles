@@ -157,8 +157,8 @@ echo " "
 
 
 
-
-
+echo ""
+echo "Exiting for now. Will finish script later"
 exit
 
 
@@ -313,8 +313,6 @@ Would you like to install the Iosevka Font? [yes/no] > " answer
 		  :
 		fi
 clear
-echo "
-Exiting for now. Will finish script later"
 
 
 exit
