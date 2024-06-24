@@ -1,0 +1,4 @@
+#!/bin/bash
+set --posix
+clear
+bash ~/bin/ChatGPT

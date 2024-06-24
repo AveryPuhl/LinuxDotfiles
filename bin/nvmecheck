@@ -1,0 +1,34 @@
+#! /bin/bash
+
+clear
+echo "			
+	-- SMARTMONTOOLS & NVME-CLI CHECK --
+			"
+
+read -p "'n' will filter only the most important data.
+'y' will run both commands without filtering.
+
+  Do you want to run a full scan? [y/n] > " answer
+  if [[ $answer = y ]] ; then
+	clear
+          sudo smartctl -H /dev/nvme0n1 | grep SMART
+	  sudo smartctl -a /dev/nvme0n1 | grep "Units Read"
+	  sudo smartctl -a /dev/nvme0n1 | grep "Units Written"
+	  sudo nvme smart-log /dev/nvme0n1 | grep critical_warning 
+	  sudo smartctl -a /dev/nvme0n1 > /home/avery/bin/logs/smartmontools.log
+	  sudo nvme smart-log /dev/nvme0n1 > /home/avery/bin/logs/nvme-cli.log
+	  echo "
+	-- Logs written to ~/bin/logs/ --
+	"
+  else
+	clear
+	  sudo smartctl -H /dev/nvme0n1 | grep SMART
+	  sudo smartctl -a /dev/nvme0n1 | grep "Units Read"
+	  sudo smartctl -a /dev/nvme0n1 | grep "Units Written"
+	  sudo nvme smart-log /dev/nvme0n1 | grep critical_warning 
+  fi
+
+echo "
+	-- done. -- 
+"
+exit
