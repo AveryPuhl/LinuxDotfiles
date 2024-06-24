@@ -2,6 +2,9 @@
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+alias ChatGPT='~/bin/InitializeGPT'
+alias nvmequickcheck='~/bin/nvmecheck'
+alias diskuse='du --human-readable --max-depth=1'
 alias download-audio='yt-dlp -x --audio-format best'
 alias download-audio-mp3='yt-dlp -x --audio-format mp3'
 alias download-audio-flac='yt-dlp -x --audio-format flac'
