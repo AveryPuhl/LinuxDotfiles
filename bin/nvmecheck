@@ -27,9 +27,8 @@ read -p "'n' will filter only the most important data.
 	  sudo smartctl -a /dev/nvme0n1 | grep "Units Written"
 	  sudo nvme smart-log /dev/nvme0n1 | grep critical_warning 
   fi
-echo " "
-echo " -- done. -- "
-echo " "
-echo "Logs are stored in ~/bin/logs/"
-echo "Please check them for information."
+
+echo "
+	-- done. -- 
+"
 exit

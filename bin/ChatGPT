@@ -7,7 +7,7 @@ echo -e "\e[36m \e[40m ChatGPT \e[0m"
 			if [[ $answer = clear ]] ; then
 				clear
 			else
-				tgpt "[$answer]"
+				tgpt "$answer"
 			fi
 		fi
 bash ~/bin/ChatGPT
