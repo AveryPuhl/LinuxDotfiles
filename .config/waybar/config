@@ -1,45 +1,54 @@
 {
-	"layer": "top",
-	"position": "top",
+	"layer": "bottom",
+	"position": "bottom",
 
-	"spacing": 3,
+	"spacing": 2,
 	"modules-left": [
 		"custom/start",
-		"memory",
-		"temperature",
-		"cpu",
+		"custom/line",
 		"hyprland/workspaces",
-                "custom/arrowL1",
+		"custom/line",
+	/*	"memory",	*/
+	/*	"custom/line",	*/
+		"cpu",		
+	/*	"custom/line",	*/
+		"temperature",	
+		"custom/line",	
 	],
 
 	"modules-center": [
-		"custom/arrowM1",
+		"custom/line",
 		"hyprland/window",
-		"custom/arrowM2",
+		"custom/line",
 	],
 	"modules-right": [
-                "custom/arrowR1",
                 "tray",
+		"custom/line",
 		"pulseaudio",
-		"network",
-		"clock",
+		"custom/line",
 		"battery",
+		"custom/line",
+		"network",
+                "custom/line",
+		"clock",
+		"custom/line",
+		"custom/notifications",
 	],
 
 // Modules
 
 	"battery": {
-		"interval": 10,
+		"interval": 1,
 		"states": {
 			"warning": 34,
 			"critical": 24
 		},
 		"format-time": "{H}:{M:02}",
 		"format": "{icon} {capacity}%",
-		"format-charging": "{icon} {capacity}%",
+		"format-charging": " {icon} {capacity}%",
 		"format-charging-full": "{icon} {capacity}%",
 		"format-full": "{icon} {capacity}%",
-		"format-alt": "{icon} {power}W",
+	/*	"format-alt": "{icon} {power}W",	*/
 		"format-icons": [
 			"",
 			"",
@@ -47,39 +56,46 @@
 			"",
 			""
 		],
-		"tooltip": false
+
+		"tooltip": true,
+		"tooltip-format": "Battery Viewer",
+		"on-click": "kitty -e 'battop'"
 	},
 
 	"clock": {
-		"interval": 1,
-		"format": "{:%I:%M %p ~ %m/%d/%y}",
+		"format": "{:%I:%M %p}",
+		"tooltip": true,
+		"tooltip-format": "{%m/%d/%y}",
 	},
-
+	
 	"cpu": {
 		"interval": 1,
-		"tooltip": false,
 		"format": " {usage}%",
 		"states": {
 			"warning": 71,
 			"critical": 86
 		},
-			"on-click": "kitty -e 'htop'"
+		"tooltip": true,
+		"tooltip-format": "",
+		"on-click": "kitty -e 'htop'"
 	},
 
 	"memory": {
 		"interval": 1,
-		"format": " {used:0.1f}G/{total:0.1f}G",
+		"format": " {used:0.1f}G / {total:0.1f}G",
 		"on-click": "kitty -e 'htop'",
-		"tooltip": false
+		"tooltip": true,
+		"tooltip-format": "RAM Usage"
 	},
 
 	"network": {
 		"interval": 10,
-		"format-wifi": "   ({signalStrength}%) ",
+		"format-wifi": "    ",
 		"format-ethernet": "   {ifname} ",
-		"format-disconnected": "  No connection ",
-		"format-alt": "   {ipaddr}/{cidr} ",
-		"tooltip": false
+		"format-disconnected": "    ",
+	/*	"format-alt": "   {ipaddr}/{cidr} ", */
+		"tooltip": true,
+		"tooltip-format": "WiFi Availability"
 	},
 
 	"pulseaudio": {
@@ -97,13 +113,14 @@
 		},
 		"scroll-step": 1,
 		"on-click": "pavucontrol-qt",
-		"tooltip": false
+		"tooltip": true,
+		"tooltip-format": "Sound Manager"
 	},
 
 	"temperature": {
-		"critical-threshold": 86,
+		"critical-threshold": 80,
 		"interval": 1,
-		"format": "{icon} {temperatureC}°C / {icon} {temperatureF}°F",
+		"format": "{icon} {temperatureC}°C",
 		"format-icons": [
 			"",
 			"",
@@ -112,16 +129,23 @@
 			""
 		],
 		"on-click": "kitty -e 'htop'",
-		"tooltip": false
+		"tooltip": true,
+		"tooltip-format": "CPU Temperature"
 	},
 
 	"tray": {
 		"icon-size": 22,
 	},
+	
+	"wlr/taskbar": {
+		"all-outputs": false
+	},
 
 	"custom/start": {
-		"format": "  Menu {}",
+		"format": "    {}",
 		"on-click": "rofi -show drun",
+		"tooltip-format": "Application Menu",
+		"tooltip": true
 	},
 
 	"hyprland/workspaces": {
@@ -130,7 +154,7 @@
 	},
 	
 	"hyprland/window": {
-		"format": " <span font='11' rise='-4444'>{}</span> "  
+		"format": "  <span font='10' rise='-4444'>{}</span>   "  
 	},
 
 	"custom/arrowL1": {
@@ -151,6 +175,18 @@
 	"custom/arrowM2": {
 		"format": "",
 		"tooltip": false
+	},
+	
+	"custom/line": {
+		"format": "|",
+		"tooltip": false
+	},
+
+	"custom/notifications": {
+		"format": "    ",
+		"tooltip": true,
+		"tooltip-format": "Notification Center",
+		"on-click": "swaync-client --open-panel",
 	},
 
 // vi:ft=jsonc

@@ -35,41 +35,49 @@
 
 @define-color black	#000000;
 @define-color drkergray #181818;
-@define-color drkgray	#282828;
+@define-color drkgray	#1E222D;
 @define-color gray	#a89984;
 @define-color brgray	#928374;
 @define-color white	#FFFFFF;
 
+@define-color winbluetaskbar #1E222B;
+@define-color winbluedarker #112351;
+@define-color winblue #67C3FD;
+@define-color wintaskbar #202020;
+@define-color winhighlight #29292B;
+@define-color winbluedimmer #25658F;
+@define-color winborder #36383A;
 @define-color drkarchlinux #093361;
 @define-color archlinux #1793D1;
 
-@define-color arrow	@drkgray;
-@define-color window	@drkergray;
+@define-color arrow	@winbluedimmer;
+@define-color window	@winhighlight;
 @define-color warning	@yellow;
 @define-color critical	@red;
 @define-color mode	@blue;
 @define-color unfocused	@black;
-@define-color focused	@archlinux;
+@define-color focused	@winborder;
 @define-color inactive	@purple;
 @define-color layout	@black;
 @define-color network	@drkgray;
 @define-color sound	@drkgray;
 @define-color memory	@drkgray;
 @define-color date	@drkgray;
-@define-color user	@drkgray;
-@define-color time	@drkgray;
-@define-color temperature @drkgray;
-@define-color cpu	@drkgray;
-@define-color battery	@drkgray;
-@define-color tray	@drkgray;
+@define-color user	@winhighlight;
+@define-color time	@winhighlight;
+@define-color temperature @winhighlight;
+@define-color cpu	@winhighlight;
+@define-color battery	@winhighlight;
+@define-color tray	@winhighlight;
 
 /* Reset all styles */
 * {
 	border: @white;
-	border-radius: 4px;
+	border-radius: 2px; 
 	min-height: 15px;
-	margin: 0px;
-	padding: 1px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding: 0px; 
 	box-shadow: @black;
 	text-shadow: @black;
 	-gtk-icon-shadow: @black;
@@ -77,9 +85,10 @@
 
 /* The whole bar */
 #waybar {
-	background: rgba(18, 18, 18, 0.75);
+	background: rgba(20, 20, 20, 0.85);
 	color: @white;
-	font-family: Iosevka;
+/*	font-family: Iosevka; */
+	font-family: Segoe-UI-Variable;
 	font-size: 10pt;
 	font-weight: bold;
 }
@@ -137,7 +146,7 @@ s#network,
 	padding-left: 2pt;
 	padding-right: 2pt;
 	color: @white;
-	background: @drkergray;
+	background: #181818;
 }
 
 /* Inactive (on unfocused output) */
@@ -148,8 +157,8 @@ s#network,
 
 /* Active (on focused output) */
 #workspaces button.active {
-	color: @black;
-	background: @focused;
+	color: @white;
+	background: @winborder;
 }
 
 /* Contains an urgent window */
@@ -160,23 +169,31 @@ s#network,
 
 /* Style when cursor is on the button */
 #workspaces button:hover {
-	background: @white;
-	color: @archlinux;
+	background: @winbluedimmer;
+	color: @white;
 }
 
 #window {
-	background: @drkergray;
+	background: @winbluetaskbar;
 	color: @white;
 }
 
 #pulseaudio {
-	background: @drkergray;
+	background: transparent;
 	color: @white;
 }
 
+#pulseaudio:hover {
+  background-color: @winhighlight;
+}
+
 #network {
-	background: @network;
+	background: transparent;
 	color: @white;
+}
+
+#network:hover {
+  background-color: @winhighlight;
 }
 
 #memory {
@@ -185,14 +202,26 @@ s#network,
 	color: @white;
 }
 
+#memory:hover {
+  background-color: @winhighlight;
+}
+
 #cpu {
 	background: @drkergray;
 	color: @white;
 }
 
+#cpu:hover {
+  background-color: @winhighlight;
+}
+
 #temperature {
-	background: @temperature;
+	background: transparent;
 	color: @white;
+}
+
+#temperature:hover {
+  background-color: @winhighlight;
 }
 
 #language {
@@ -201,13 +230,23 @@ s#network,
 }
 
 #battery {
-	background: @drkergray;
+	background: transparent;
 	color: @white;
+	margin-left: -2pt;
+	margin-right: -2pt;
+}
+
+#battery:hover {
+  background-color: @winhighlight;
 }
 
 #tray {
-	background: @drkergray;
+	background: transparent;
         color: @white;
+}
+
+#tray:hover {
+  background-color: @winhighlight;
 }
 
 #user {
@@ -216,14 +255,37 @@ s#network,
 }
 
 #clock {
-	background: @time;
+	background: transparent;
 	color: @white;
+	font-size: 11pt;
+}
+
+#clock:hover {
+  background-color: @winhighlight;
+}
+
+#custom-notifications {
+	font-size: 16pt;
+	color: @white;
+	background: transparent;
+	margin-right: 7px;
+	margin-left: 2px;
+}
+
+#custom-notifications:hover {
+  background-color: @winhighlight;
 }
 
 #custom-start {
-	font-size: 11pt;
+	font-size: 16pt;
 	color: @white;
-	background: @drkergray;
+	background: transparent;
+	margin-left: 7px;
+	margin-right: 2px;
+}
+
+#custom-start:hover {
+  background-color: @winhighlight;
 }
 
 #custom-arrowL1 {
@@ -249,5 +311,11 @@ s#network,
 	font-size: 13pt;
 	color: @arrow;
 	margin-right: 12pt;
+	background: transparent;
+}
+
+#custom-line {
+	font-size: 14pt;
+	color: @arrow;
 	background: transparent;
 }
