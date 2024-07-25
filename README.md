@@ -12,17 +12,25 @@ However, if you aknowledge that you're responsible for any damage done to your s
 ## Software
 
 OS: [Archlinux](https://archlinux.org/)
+
 Kernel: [linux-tkg](https://github.com/Frogging-Family/linux-tkg)
+
 Window Manager: [Hyprland](https://hyprland.org/)
+
 Desktop Bar: [Waybar](https://github.com/Alexays/Waybar)
 
 Notification Center: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
+
 Appmenu: [Rofi (Wayland Fork)](https://github.com/lbonn/rofi)
 
 Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
+
 Shell Prompt: [Starship](https://starship.rs/)
+
 System Fetch: [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+
 System Monitor: [Htop](https://htop.dev/)
+
 ## Previews
 
 
