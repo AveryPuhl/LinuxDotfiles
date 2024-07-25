@@ -3,7 +3,7 @@ clear
 echo -e "\e[36m \e[40m          -- Avery Puhl's Archlinux Desktop Installer --          \e[0m"
 echo -e "\e[33m \e[40m [Important Note]: Every pacman uses the flags: -S --needed --noconfirm \e[0m"
 echo -e "Thanks for using my script! Hopefully this will speed up the setup process!"
-echo "This script is fully automatic. Simply answer the questions."
+echo "This script is step-by-step and user-dependant. Simply answer the questions."
 echo " "
 read -p "Do You Wish To Continue? [yes/no] > " answer
 	if [[ $answer = no ]] ; then

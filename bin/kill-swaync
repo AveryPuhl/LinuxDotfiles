@@ -1,0 +1,4 @@
+#!/bin/bash
+pidof_swaync=$(pidof swaync)
+kill -9 $pidof_swaync
+exit

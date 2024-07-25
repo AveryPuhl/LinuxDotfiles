@@ -1,12 +1,37 @@
 #!/bin/bash
+#  ─────────────────────────
+#   Blank Out hyprpapr.conf
+#  ─────────────────────────
+echo "" > ~/.config/hypr/hyprpaper.conf
+	echo "Wiped out hyprpaper.conf"
+#  ──────────────────
+#   Count Wallpapers
+#  ──────────────────
 wallpapercount=$(ls -A /home/avery/.config/wallpaper | wc -l)
-preloadnumber=$((preloadnumber+1))
-echo "preload = /home/avery/.config/wallpaper/W$preloadnumber.jpg" > /home/avery/.config/hypr/hyprpaper.conf
-echo "preload = /home/avery/.config/wallpaper/W2.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
-echo "preload = /home/avery/.config/wallpaper/W3.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
-echo "preload = /home/avery/.config/wallpaper/W4.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
-echo "preload = /home/avery/.config/wallpaper/W5.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
-echo "preload = /home/avery/.config/wallpaper/W6.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
-echo "preload = /home/avery/.config/wallpaper/W7.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
-echo "wallpaper = eDP-1, /home/avery/.config/wallpaper/W$((1 + $RANDOM % $wallpapercount)).jpg" >> /home/avery/.config/hypr/hyprpaper.conf
-exit
+	echo "Found $wallpapercount wallpapers"
+wallpapercount=$((wallpapercount++))
+#  ───────────────────────────────
+#   Write Preloads For Wallpapers
+#  ───────────────────────────────
+  for ((preloadnumber=1 ; preloadnumber < wallpapercount ; preloadnumber++)); do
+	echo "Loading wallpaper #$preloadnumber"
+	echo "preload = /home/avery/.config/wallpaper/W$preloadnumber.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+  done
+echo "Loading wallpaper #$wallpapercount"
+echo "preload = /home/avery/.config/wallpaper/W$wallpapercount.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+#  ─────────────────────────
+#   Select Random Wallpaper
+#  ─────────────────────────
+currentwallpaper=$((1 + $RANDOM % $wallpapercount))
+#  if ((currentwallpaper > echo $wallpapercount)); then
+#	currentwallpaper=$wallpapercount
+#    else
+#	:
+#    fi
+echo "wallpaper = eDP-1, /home/avery/.config/wallpaper/W$currentwallpaper.jpg" >> /home/avery/.config/hypr/hyprpaper.conf
+	echo "Wallpaper #$currentwallpaper Has Been Chosen"
+#  ──────────────────────────
+#   Notify Completion & Exit
+#  ──────────────────────────
+	echo "Done!"
+  exit
