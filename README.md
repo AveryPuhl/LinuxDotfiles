@@ -7,6 +7,7 @@ I **HIGHLY** discourage you to use these. Especially my scripts. This is because
 However, if you aknowledge that you're responsible for any damage done to your system, use one of these methods if you want something from my repo:
 1) Hand-pick specifically the files you want.
 2) download the entire repository with git:
+   
 ``` git clone --recursive https://github.com/AveryPuhl/dotfiles ```
 
 ## Software
