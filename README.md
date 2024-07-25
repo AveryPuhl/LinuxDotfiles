@@ -1,11 +1,34 @@
-# Avery Puhl's Dotfiles
-This is a personal repository for my ideal system dotfiles. Mainly simple bash scripts and .conf files.  
-I **HIGHLY** discourage you to use these. this repo exists for a git clone, that is all.
-# Previews
-### Starship - [Archlinux Respoitory](https://archlinux.org/packages/extra/x86_64/starship/) OR [Official Website](https://starship.rs/)
-![starship-preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/90bbbd94-9866-4e09-8914-b0bfcf4a70df)
-### Waybar - [Archlinux Repository](https://archlinux.org/packages/extra/x86_64/waybar/) OR [GitHub Repository](https://github.com/Alexays/Waybar)
-![waybar-preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/5c24352d-2014-46fd-957f-4221ab6c96b4)
-### Rofi Wayland - [Archlinux Repository](https://archlinux.org/packages/extra/x86_64/rofi-wayland/)
-![rofi-wayland-preview](https://github.com/AveryPuhl/dotfiles/assets/170648281/89f6241b-00ae-4a15-8d6c-b8ade59d0a09)
+# Avery Puhl's Linux Configuration
+This is a personal repository for my personal system configuration.
+This contains things like my .config folder and my scripts.
 
+I **HIGHLY** discourage you to use these. Especially my scripts. This is because many of these files are "hard-coded" for my personal filesystem (e.g /home/avery, ~/bin, et cetera) making them the opposite of robust.
+
+However, if you aknowledge that you're responsible for any damage done to your system, use one of these methods if you want something from my repo:
+1) Hand-pick specifically the files you want.
+2) download the entire repository with git:
+``` git clone --recursive https://github.com/AveryPuhl/dotfiles ```
+
+## Software
+
+OS: [Archlinux](https://archlinux.org/)
+Kernel: [linux-tkg](https://github.com/Frogging-Family/linux-tkg)
+Window Manager: [Hyprland](https://hyprland.org/)
+Desktop Bar: [Waybar](https://github.com/Alexays/Waybar)
+
+Notification Center: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
+Appmenu: [Rofi (Wayland Fork)](https://github.com/lbonn/rofi)
+
+Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
+Shell Prompt: [Starship](https://starship.rs/)
+System Fetch: [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+System Monitor: [Htop](https://htop.dev/)
+## Previews
+
+
+Desktop:
+![image](https://github.com/user-attachments/assets/965073aa-cd74-4979-a6bf-3269c3eb9e74)
+
+
+Terminal:
+![image](https://github.com/user-attachments/assets/d55ca05e-a9e5-4692-9465-06a489a1d070)
