@@ -14,7 +14,7 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
+        icon-theme: "Win11-blue-dark";
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -32,7 +32,7 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-	combi-modes: "filebrowser,drun";
+	combi-modes: "filebrowser,drun,run";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
@@ -162,9 +162,5 @@ configuration {
 //@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
 
 //@theme "/usr/share/rofi/themes/AverysTheme.rasi"
-
-//@theme "/usr/share/rofi/themes/windows11-list-dark.rasi"
-
-//@theme "/usr/share/rofi/themes/windows11-grid-dark.rasi"
 
 @theme "/usr/share/rofi/themes/windows11-list-dark.rasi"

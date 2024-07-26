@@ -1,42 +1,34 @@
-{
+  {
+/* ╭──────────────────────╮ */
+/* │     Organization     │ */
+/* ╰──────────────────────╯ */
 	"layer": "bottom",
 	"position": "bottom",
-
 	"spacing": 2,
 	"modules-left": [
 		"custom/start",
-		"custom/line",
-		"hyprland/workspaces",
-		"custom/line",
-	/*	"memory",	*/
-	/*	"custom/line",	*/
-		"cpu",		
-	/*	"custom/line",	*/
-		"temperature",	
-		"custom/line",	
-	],
-
-	"modules-center": [
-		"custom/line",
+		"hyprland/workspaces",	
+		"custom/arrowR1",
 		"hyprland/window",
-		"custom/line",
+		"custom/arrowL1",
+	],
+	"modules-center": [
 	],
 	"modules-right": [
                 "tray",
-		"custom/line",
+	/*	"cpu",			*/
+	/*	"temperature",		*/
+	/*	"memory",		*/
 		"pulseaudio",
-		"custom/line",
-		"battery",
-		"custom/line",
 		"network",
-                "custom/line",
+		"battery",
 		"clock",
-		"custom/line",
 		"custom/notifications",
 	],
-
 // Modules
-
+/* ╭─────────────────╮ */
+/* │     Modules     │ */
+/* ╰─────────────────╯ */
 	"battery": {
 		"interval": 1,
 		"states": {
@@ -44,11 +36,14 @@
 			"critical": 24
 		},
 		"format-time": "{H}:{M:02}",
-		"format": "{icon} {capacity}%",
-		"format-charging": " {icon} {capacity}%",
-		"format-charging-full": "{icon} {capacity}%",
-		"format-full": "{icon} {capacity}%",
-	/*	"format-alt": "{icon} {power}W",	*/
+		"format": "  {icon} {capacity}%  ",
+		"format-charging": " {icon} {capacity}%  ",
+		"format-charging-full": " {icon} {capacity}%  ",
+		"format-full": " {icon} {capacity}%  ",
+	/*	"format-alt": " {icon} {power}W  ",	*/
+		"tooltip": true,
+		"tooltip-format": "Battery",
+		"on-click": "kitty -e 'battop'",
 		"format-icons": [
 			"",
 			"",
@@ -56,16 +51,12 @@
 			"",
 			""
 		],
-
-		"tooltip": true,
-		"tooltip-format": "Battery Viewer",
-		"on-click": "kitty -e 'battop'"
 	},
 
 	"clock": {
-		"format": "{:%I:%M %p}",
+		"format": "    {:%I:%M %p%n %m/%d/%Y}  ",
 		"tooltip": true,
-		"tooltip-format": "{%m/%d/%y}",
+		"tooltip-format": "Clock", 
 	},
 	
 	"cpu": {
@@ -92,16 +83,16 @@
 		"interval": 10,
 		"format-wifi": "    ",
 		"format-ethernet": "   {ifname} ",
-		"format-disconnected": "    ",
+		"format-disconnected": "     ",
 	/*	"format-alt": "   {ipaddr}/{cidr} ", */
 		"tooltip": true,
-		"tooltip-format": "WiFi Availability"
+		"tooltip-format": "WiFi"
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
-		"format-muted": "",
+		"format": " {icon} {volume}% ",
+		"format-bluetooth": " {icon} {volume}% ",
+		"format-muted": "  ",
 		"format-icons": {
 			"headphone": "",
 			"hands-free": "",
@@ -114,13 +105,13 @@
 		"scroll-step": 1,
 		"on-click": "pavucontrol-qt",
 		"tooltip": true,
-		"tooltip-format": "Sound Manager"
+		"tooltip-format": "Audio Volume"
 	},
 
 	"temperature": {
 		"critical-threshold": 80,
 		"interval": 1,
-		"format": "{icon} {temperatureC}°C",
+		"format": " {icon} {temperatureC}°C ",
 		"format-icons": [
 			"",
 			"",
@@ -141,22 +132,22 @@
 		"all-outputs": false
 	},
 
-	"custom/start": {
-		"format": "    {}",
-		"on-click": "rofi -show drun",
-		"tooltip-format": "Application Menu",
-		"tooltip": true
-	},
-
 	"hyprland/workspaces": {
      		"format": "{icon}",
      		"on-click": "activate"
 	},
 	
 	"hyprland/window": {
-		"format": "  <span font='10' rise='-4444'>{}</span>   "  
+		"format": " <span font='11' rise='-4444'>{}</span> "  
 	},
 
+/*	"custom/weather": {															*/
+/*	    "exec": "python ~/.config/waybar/scripts/weather.py",										*/
+/*	    "restart-interval": 3,														*/
+/*	    "return-type": "json",														*/
+/*	    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/e5171f48391f2dc12a1886956c15bd81bfa1ec7a42d43cc0f76dd54cece6c40d"	*/
+/*	    // "format-alt": "{alt}",														*/
+/*	},																	*/
 	"custom/arrowL1": {
 		"format": "",
 		"tooltip": false
@@ -182,11 +173,25 @@
 		"tooltip": false
 	},
 
+	"custom/start": {
+		"format": "  {}",
+		"on-click": "rofi -config /home/avery/.config/rofi/appmenu.rasi -show drun",
+		"tooltip-format": "Application Menu",
+		"tooltip": true
+	},
+
 	"custom/notifications": {
 		"format": "    ",
 		"tooltip": true,
 		"tooltip-format": "Notification Center",
 		"on-click": "swaync-client --open-panel",
+	},
+
+	"custom/search": {
+		"format": "  Search                            ",
+		"on-click": "rofi -combi drun,run,filesystem, -show combi",
+		"tooltip": true,
+		"tooltip-format": "Search Anything",
 	},
 
 // vi:ft=jsonc

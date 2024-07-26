@@ -44,7 +44,7 @@
 @define-color winbluetaskbar #1E222B;
 @define-color winbluedarker #112351;
 @define-color winblue #67C3FD;
-@define-color wintaskbar #20201F;
+}@define-color wintaskbar #20201F;
 @define-color winhighlight #29292B;
 @define-color winbluedimmer #25658F;
 @define-color winborder #36383A;
@@ -168,7 +168,7 @@ tooltip label {
 /* Active (on focused output) */
 #workspaces button.active {
 	color: @white;
-	background: transparent;
+	background: @winhighlight;
 }
 
 /* Contains an urgent window */
@@ -179,7 +179,7 @@ tooltip label {
 
 /* Style when cursor is on the button */
 #workspaces button:hover {
-	background: @winhighlight;
+	background: @winbluedimmer;
 	color: @white;
 }
 
@@ -304,13 +304,13 @@ tooltip label {
 
 #custom-arrowL1 {
 	font-size: 11pt;
-	color: @winhighlight;
+	color: @arrow;
 	background: transparent;
 }
 
 #custom-arrowR1 {
 	font-size: 11pt;
-	color: @winhighlight;
+	color: @arrow;
 	background: transparent;
 }
 
@@ -335,7 +335,7 @@ tooltip label {
 }
 
 #custom-start {
-	font-size: 20pt;
+	font-size: 18pt;
 	color: @white;
 	background: transparent;
 	margin-left: 2px;
