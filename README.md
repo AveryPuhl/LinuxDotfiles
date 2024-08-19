@@ -8,7 +8,7 @@ However, if you aknowledge that you're responsible for any damage done to your s
 1) Hand-pick specifically the files you want.
 2) download the entire repository with git:
    
-``` git clone --recursive https://github.com/AveryPuhl/dotfiles ```
+``` git clone --recursive https://github.com/AveryPuhl/LinuxDotfiles ```
 
 ## Software
 
