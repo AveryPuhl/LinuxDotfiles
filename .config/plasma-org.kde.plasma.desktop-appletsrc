@@ -4,48 +4,16 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-ItemGeometries-1024x768=Applet-33:575.652,592,448,128,0;
-ItemGeometries-1366x768=Applet-96:2463.15,640,54,54,0;
-ItemGeometries-1438x808=Applet-96:2535.15,680,54,54,0;
-ItemGeometries-1920x1080=Applet-96:2463.15,640,54,54,0;
-ItemGeometriesHorizontal=Applet-96:2463.15,640,54,54,0;
-activityId=18415521-90e9-484e-bf77-2d2fdbe490d8
+[Containments][101]
+ItemGeometries-1366x675=
+ItemGeometriesHorizontal=
+activityId=6f654e29-c546-4811-9a7c-4f31109ffbe1
 formfactor=0
 immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][1][Applets][96]
-immutability=1
-plugin=org.kde.plasma.panelspacer
-
-[Containments][1][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][1][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=344
-arrangement=1
-filterMimeTypes=\\0
-iconSize=2
-positions={"1366x768":[]\\,"1024x768":[""]\\,"1920x1080":[]\\,"1438x808":[""]}
-sortMode=-1
-url=file:///home/avery/Desktop
-
-[Containments][1][Wallpaper][org.kde.image][General]
-Image=/home/avery/Pictures/Wallpapers/Windows Seven Default.png
-SlidePaths=/usr/share/wallpapers/
-
-[Containments][1][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/avery/.config/wallpaper/W1.jpg
-SlideInterval=3600
-SlidePaths=/home/avery/.config/wallpaper/
-SlideshowMode=1
-UncheckedSlides=/usr/share/wallpapers/Altai/,/home/avery/Pictures/Wallpapers/1315219.jpeg,/home/avery/Pictures/Wallpapers/W4.jpg,/home/avery/Pictures/Wallpapers/W6.jpg
+wallpaperplugin=org.kde.image
 
 [Containments][2]
 activityId=
@@ -101,13 +69,12 @@ showIconsRootLevel=true
 showRecentApps=false
 showRecentDocs=false
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
-useCustomButtonImage=true
 
 [Containments][2][Applets][91][Configuration][Shortcuts]
 global=Alt+F1
 
 [Containments][2][Applets][91][Shortcuts]
-global=Alt+F1
+global=
 
 [Containments][2][Applets][95]
 immutability=1
@@ -279,38 +246,6 @@ PreloadWeight=42
 [Containments][41][General]
 extraItems=org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.vault,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager
 knownItems=org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.vault,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager
-
-[Containments][57]
-ItemGeometries-1366x768=
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=18415521-90e9-484e-bf77-2d2fdbe490d8
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][57][ConfigDialog]
-DialogHeight=510
-DialogWidth=680
-
-[Containments][57][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=384
-
-[Containments][57][Wallpaper][org.kde.image][General]
-Image=/home/avery/Pictures/the-dark-side-of-the-moon-hd-wallpaper-3840x2160.jpg
-PreviewImage=/home/avery/Pictures/the-dark-side-of-the-moon-hd-wallpaper-3840x2160.jpg
-SlidePaths=/usr/share/wallpapers/
-
-[Containments][57][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/avery/Pictures/Wallpapers/Archlinux Hardwood Floor.png
-SlideInterval=3600
-SlidePaths=/home/avery/Pictures/Wallpapers/
-SlideshowMode=1
-UncheckedSlides=/usr/share/wallpapers/Altai/,/home/avery/Pictures/Wallpapers/1315219.jpeg,/home/avery/Pictures/Wallpapers/W4.jpg,/home/avery/Pictures/Wallpapers/W6.jpg
 
 [Containments][58]
 activityId=
@@ -633,5 +568,5 @@ knownItems=org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.
 shownItems=org.kde.plasma.brightness,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.battery
 
 [ScreenMapping]
-itemsOnDisabledScreens=1,18415521-90e9-484e-bf77-2d2fdbe490d8,1,desktop:/Grand Theft Auto V.desktop,0,18415521-90e9-484e-bf77-2d2fdbe490d8,27,desktop:/virtualbox.desktop,desktop:/bin,desktop:/vlc.desktop,desktop:/Eronoctosis Put Yourself Together.desktop,desktop:/tModLoader.desktop,desktop:/Videos,desktop:/Pictures,desktop:/tauonmb.desktop,desktop:/Desktop,desktop:/Public,desktop:/Music,desktop:/Terraria.desktop,desktop:/Documents,desktop:/github,desktop:/localmnt,desktop:/minecraft-launcher.desktop,desktop:/steam.desktop,desktop:/Archlinux.desktop,desktop:/Antimatter Dimensions.desktop,desktop:/Downloads,desktop:/Stellaris.desktop,desktop:/firefox.desktop,desktop:/backup,desktop:/Starbound.desktop,desktop:/discord.desktop,desktop:/Trailmakers.desktop,desktop:/Templates
-screenMapping=file:///home/avery/Desktop/Avery,0,18415521-90e9-484e-bf77-2d2fdbe490d8,file:///home/avery/Desktop/My Computer,0,18415521-90e9-484e-bf77-2d2fdbe490d8,file:///home/avery/Desktop/Youtube.desktop,0,18415521-90e9-484e-bf77-2d2fdbe490d8
+itemsOnDisabledScreens=0,18415521-90e9-484e-bf77-2d2fdbe490d8,27,desktop:/tModLoader.desktop,desktop:/Videos,desktop:/Pictures,desktop:/tauonmb.desktop,desktop:/virtualbox.desktop,desktop:/bin,desktop:/vlc.desktop,desktop:/Eronoctosis Put Yourself Together.desktop,desktop:/Antimatter Dimensions.desktop,desktop:/Downloads,desktop:/Stellaris.desktop,desktop:/firefox.desktop,desktop:/backup,desktop:/Starbound.desktop,desktop:/discord.desktop,desktop:/Trailmakers.desktop,desktop:/Templates,desktop:/Desktop,desktop:/Public,desktop:/Music,desktop:/Terraria.desktop,desktop:/Documents,desktop:/github,desktop:/localmnt,desktop:/minecraft-launcher.desktop,desktop:/steam.desktop,desktop:/Archlinux.desktop,1,18415521-90e9-484e-bf77-2d2fdbe490d8,1,desktop:/Grand Theft Auto V.desktop
+screenMapping=file:///home/avery/Desktop/My Computer,0,18415521-90e9-484e-bf77-2d2fdbe490d8,file:///home/avery/Desktop/Youtube.desktop,0,18415521-90e9-484e-bf77-2d2fdbe490d8,file:///home/avery/Desktop/Avery,0,18415521-90e9-484e-bf77-2d2fdbe490d8
