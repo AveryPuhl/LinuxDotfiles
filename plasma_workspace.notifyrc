@@ -1,0 +1,40 @@
+[Event/Trash: emptied]
+Sound=file:///usr/share/sounds/Windows/Windows Recycle.wav
+
+[Event/beep]
+Sound=file:///usr/share/sounds/Windows/Windows Ding.wav
+
+[Event/catastrophe]
+Sound=file:///usr/share/sounds/Windows/Windows Error.wav
+
+[Event/deviceAdded]
+Sound=file:///usr/share/sounds/Windows/Windows Hardware Insert.wav
+
+[Event/deviceRemoved]
+Sound=file:///usr/share/sounds/Windows/Windows Hardware Remove.wav
+
+[Event/exitkde]
+Action=Sound
+Sound=file:///usr/share/sounds/Windows/Windows Logoff Sound.wav
+
+[Event/fatalerror]
+Sound=file:///usr/share/sounds/Windows/Windows Hardware Fail.wav
+
+[Event/messageCritical]
+Sound=file:///usr/share/sounds/Windows/Windows User Account Control.wav
+
+[Event/messageInformation]
+Sound=file:///usr/share/sounds/Windows/Windows Notify.wav
+
+[Event/messageQuestion]
+Sound=file:///usr/share/sounds/Windows/Windows User Account Control.wav
+
+[Event/messageWarning]
+Sound=file:///usr/share/sounds/Windows/Windows Exclamation.wav
+
+[Event/startkde]
+Action=Sound
+Sound=file:///usr/share/sounds/Windows/Windows Logon.wav
+
+[Event/warning]
+Sound=file:///usr/share/sounds/Windows/Windows Exclamation.wav
