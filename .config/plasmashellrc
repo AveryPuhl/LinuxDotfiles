@@ -14,7 +14,7 @@ panelOpacity=0
 panelVisibility=0
 
 [PlasmaViews][Panel 2][Defaults]
-thickness=40
+thickness=32
 
 [PlasmaViews][Panel 58]
 floating=1
