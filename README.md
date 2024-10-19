@@ -7,25 +7,24 @@ I ***highly*** discourage you to use my scripts (found in ~/bin). Many of these 
 I will ***NOT*** help you if you break your system, somehow.
 ## Software
 
-OS: [Archlinux](https://archlinux.org/)
+*System:*
+*	OS: [Archlinux](https://archlinux.org/)
+* Kernel: [linux-tkg](https://github.com/Frogging-Family/linux-tkg)
 
-Kernel: [linux-tkg](https://github.com/Frogging-Family/linux-tkg)
+*Desktop Setup #1:*
+* Window Manager: [Hyprland](https://hyprland.org/)
+* Desktop Bar: [Waybar](https://github.com/Alexays/Waybar)
+* Notification Center: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
+* Appmenu: [Rofi (Wayland Fork)](https://github.com/lbonn/rofi)
 
-Window Manager: [Hyprland](https://hyprland.org/)
+*Desktop Setup #2:*
+* Desktop Environment: [KDE Plasma](https://kde.org/plasma-desktop/)
 
-Desktop Bar: [Waybar](https://github.com/Alexays/Waybar)
-
-Notification Center: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
-
-Appmenu: [Rofi (Wayland Fork)](https://github.com/lbonn/rofi)
-
-Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
-
-Shell Prompt: [Starship](https://starship.rs/)
-
-System Fetch: [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
-
-System Monitor: [Htop](https://htop.dev/)
+*Terminal Setup:*
+* Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
+* Shell Prompt: [Starship](https://starship.rs/)
+* System Info: [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+* System Monitor: [Htop](https://htop.dev/)
 
 ## Previews
 
