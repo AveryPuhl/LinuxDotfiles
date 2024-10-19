@@ -1,15 +1,10 @@
-# Avery Puhl's Linux Configuration
-This is a personal repository for my personal system configuration.
-This contains things like my .config folder and my scripts.
 
-I **HIGHLY** discourage you to use these. Especially my scripts. This is because many of these files are "hard-coded" for my personal filesystem (e.g /home/avery, ~/bin, et cetera) making them the opposite of robust.
+# *Avery Puhl's Linux Configuration*
+This contains config files and shell scripts belonging to my personal Archlinux system configuration.
 
-However, if you aknowledge that you're responsible for any damage done to your system, use one of these methods if you want something from my repo:
-1) Hand-pick specifically the files you want.
-2) download the entire repository with git:
-   
-``` git clone --recursive https://github.com/AveryPuhl/LinuxDotfiles ```
+I ***highly*** discourage you to use my scripts (found in ~/bin). Many of these scripts are the opposite of robust (e.g hard-coded file paths, bugs, et cetera), and I cannot recommend any usage.
 
+I will ***NOT*** help you if you break your system, somehow.
 ## Software
 
 OS: [Archlinux](https://archlinux.org/)
