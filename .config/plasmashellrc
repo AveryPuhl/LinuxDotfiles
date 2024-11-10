@@ -7,7 +7,14 @@
 [KFileDialog Settings]
 iconViewIconSize=48
 
+[PlasmaViews][Panel 168]
+floating=1
+
+[PlasmaViews][Panel 168][Defaults]
+thickness=32
+
 [PlasmaViews][Panel 2]
+alignment=1
 floating=0
 panelLengthMode=0
 panelOpacity=0

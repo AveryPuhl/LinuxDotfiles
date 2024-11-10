@@ -1,36 +1,35 @@
 # The literal placement of components from left to right.
 format = """
-[░▒▓](fg:#093361 bg:#1793D100)\
-[ CLI](fg:#FFFFFF bg:#093361)\
-[](fg:#093361 bg:#181818)\
+[░▒▓](fg:#928374 bg:#1d202150)\
 $username\
-[](fg:#181818 bg:#38494a)\
-[](fg:#38494a bg:#222222)\
+[](fg:#1d2021 bg:#a89984)\
+[](fg:#a89984 bg:#282828)\
 $time\
-[](fg:#222222 bg:#48595A)\
-[](fg:#48595A bg:#303030)\
+[](fg:#282828 bg:#bdae93)\
+[](fg:#bdae93 bg:#32302f)\
 $directory\
-[](fg:#303030 bg:#58696A)\
-[](fg:#58696a bg:#30303000)\
-[> ](fg:#ffffff bg:#30303000)\
+[](fg:#32302f bg:#d5c4a1)\
+[](fg:#d5c4a1 bg:#30303000)\
+[\n](fg:#d5c4a1 bg:#30303000)\
+[ > ](fg:#ffffff bg:#30303000)\
 """
 command_timeout = 5000
 
 # Indivdial Modification of Units
 [username]
 show_always = true
-style_user = "bg:#181818"
-style_root = "bg:#3B4252"
+style_user = "bg:#1d2021"
+style_root = "bg:#1d2021"
 format = '[ $user ]($style)'
 
 [time]
 disabled = false
 time_format = "%I:%M %p"
-style = "bg:#222222"
+style = "bg:#282828"
 format = '[ $time ]($style)'
 
 [directory]
-style = "bg:#303030"
+style = "bg:#32302f"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
