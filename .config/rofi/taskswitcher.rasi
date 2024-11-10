@@ -1,7 +1,7 @@
 configuration {
 	modes: "drun,run,filebrowser,combi";
-	font: "Segoe-UI-Variable 11";
-	location: 0;
+	font: "Iosevka";
+	location: 7;
 	yoffset: 50;
 	xoffset: 50;
 /*	fixed-num-lines: true;*/
@@ -157,8 +157,4 @@ configuration {
 
 //@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
 
-//@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
-
-//@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
-
-@theme "/usr/share/rofi/themes/AverysTheme.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"

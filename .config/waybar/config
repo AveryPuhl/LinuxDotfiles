@@ -4,24 +4,25 @@
 /* ╰──────────────────────╯ */
 	"layer": "bottom",
 	"position": "bottom",
-	"spacing": 2,
+	"spacing": 3,
 	"modules-left": [
-		"custom/start",
 		"hyprland/workspaces",	
-		"custom/arrowR1",
-		"hyprland/window",
-		"custom/arrowL1",
+		"cpu",
+		"temperature",
+		"memory",
+		"custom/arrowL",
 	],
 	"modules-center": [
+		"custom/arrowR",
+		"hyprland/window",
+		"custom/arrowL",
 	],
 	"modules-right": [
-                "tray",
-	/*	"cpu",			*/
-	/*	"temperature",		*/
-	/*	"memory",		*/
+		"custom/arrowR",
+		"tray",
 		"pulseaudio",
-		"network",
 		"battery",
+		"network",
 		"clock",
 		"custom/notifications",
 	],
@@ -35,12 +36,12 @@
 			"warning": 34,
 			"critical": 24
 		},
-		"format-time": "{H}:{M:02}",
-		"format": "  {icon} {capacity}%  ",
-		"format-charging": " {icon} {capacity}%  ",
-		"format-charging-full": " {icon} {capacity}%  ",
-		"format-full": " {icon} {capacity}%  ",
-	/*	"format-alt": " {icon} {power}W  ",	*/
+		"format-time":"{H}:{M:02}",
+		"format": "{icon} {capacity}%",
+		"format-charging": "{icon} {capacity}%",
+		"format-charging-full": "{icon} {capacity}%",
+		"format-full": "{icon} {capacity}%",
+	/*	"format-alt": "{icon} {power}W",	*/
 		"tooltip": true,
 		"tooltip-format": "Battery",
 		"on-click": "kitty -e 'battop'",
@@ -54,7 +55,7 @@
 	},
 
 	"clock": {
-		"format": "    {:%I:%M %p%n %m/%d/%Y}  ",
+		"format": " {:%I:%M %p%n %m/%d/%Y}",
 		"tooltip": true,
 		"tooltip-format": "Clock", 
 	},
@@ -140,42 +141,20 @@
 	"hyprland/window": {
 		"format": " <span font='11' rise='-4444'>{}</span> "  
 	},
-
-/*	"custom/weather": {															*/
-/*	    "exec": "python ~/.config/waybar/scripts/weather.py",										*/
-/*	    "restart-interval": 3,														*/
-/*	    "return-type": "json",														*/
-/*	    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/e5171f48391f2dc12a1886956c15bd81bfa1ec7a42d43cc0f76dd54cece6c40d"	*/
-/*	    // "format-alt": "{alt}",														*/
-/*	},																	*/
-	"custom/arrowL1": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrowR1": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrowM1": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrowM2": {
-		"format": "",
-		"tooltip": false
-	},
 	
-	"custom/line": {
-		"format": "|",
+	"custom/arrowL": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrowR": {
+		"format": "",
 		"tooltip": false
 	},
 
 	"custom/start": {
 		"format": "  {}",
-		"on-click": "rofi -config /home/avery/.config/rofi/appmenu.rasi -show drun",
+		"on-click": "rofi -config /home/Avery/.config/rofi/appmenu.rasi -show drun",
 		"tooltip-format": "Application Menu",
 		"tooltip": true
 	},

@@ -1,130 +1,85 @@
-
-	/* Keyframes */
-
-@keyframes blink-critical {
-	to {
-		/*color: @white;*/
-		background-color: @critical;
-	}
-}
-
 	/* Colors */
+@define-color bg0_h			#1d2021;
+@define-color bg0			#282828;
+@define-color bg0_s			#32302f;
+@define-color bg1			#3c3836;
+@define-color bg2			#504945;
+@define-color bg3			#665c54;
+@define-color bg4			#7c6f64;
+@define-color gray			#928374;
+@define-color fg4			#a89984;
+@define-color fg3			#bdae93;
+@define-color fg2			#d5c4a1;
+@define-color fg1			#ebdbb2;
+@define-color fg0			#fbf1c7;
 
-@define-color drkred    #6e4d4d;
-@define-color red	#cc241d;
-@define-color brred	#fb4934;
+@define-color red			#cc241d;
+@define-color lred			#fb4934;
+@define-color orange		#d65d0e;
+@define-color lorange		#fe8019;
+@define-color yellow		#d79921;
+@define-color lyellow		#fabd2f;
+@define-color green			#98971a;
+@define-color lgreen		#b8bb26;
+@define-color blue			#458588;
+@define-color lblue			#83a598;
+@define-color purple		#b16286;
+@define-color lpurple		#d3869b;
+@define-color aqua			#689d6a;
+@define-color laqua			#8ec07c;
 
-@define-color drkyellow #6e6b4d;
-@define-color yellow	#d79921;
-@define-color bryellow	#fabd2f;
+@define-color black 		@bg0;
+@define-color white 		@fg1;
 
-@define-color drkgreen  #222b20;
-@define-color green	#98971a;
-@define-color brgreen	#b8bb26;
-
-@define-color drkaqua   #4d6e4e;
-@define-color aqua	#689d6a;
-@define-color braqua	#8ec07c;
-
-@define-color drkblue   #4d516e;
-@define-color blue	#458588;
-@define-color brblue	#83a598;
-
-@define-color drkpurple #6a4d6e;
-@define-color purple	#b16286;
-@define-color brpurple	#d3869b;
-
-@define-color black	#000000;
-@define-color drkergray #181818;
-@define-color drkgray	#1E222D;
-@define-color gray	#a89984;
-@define-color brgray	#928374;
-@define-color white	#FFFFFF;
-
-@define-color winbluetaskbar #1E222B;
-@define-color winbluedarker #112351;
-@define-color winblue #67C3FD;
-@define-color wintaskbar #20201F;
-@define-color winhighlight #29292B;
-@define-color winbluedimmer #25658F;
-@define-color winborder #36383A;
-@define-color drkarchlinux #093361;
-@define-color archlinux #1793D1;
-
-@define-color arrow	@winbluedimmer;
-@define-color window	@winhighlight;
-@define-color warning	@yellow;
-@define-color critical	@red;
-@define-color mode	@blue;
-@define-color unfocused	@black;
-@define-color focused	@winborder;
-@define-color inactive	@purple;
-@define-color layout	@black;
-@define-color network	@drkgray;
-@define-color sound	@drkgray;
-@define-color memory	@drkgray;
-@define-color date	@drkgray;
-@define-color user	@winhighlight;
-@define-color time	@winhighlight;
-@define-color temperature @winhighlight;
-@define-color cpu	@winhighlight;
-@define-color battery	@winhighlight;
-@define-color tray	@winhighlight;
-
-/* Reset all styles */
+	/* Everything */
 * {
-	border: @white;
-/*	border-radius: 3px; */
-	min-height: 18px;
-/*	margin-top: 1px;	*/
-/*	margin-bottom: 1px;	*/
-	margin-left: 2px;
-	margin-right: 2px;
-	padding: 0px; 
-	box-shadow: @black;
-	text-shadow: @black;
-	-gtk-icon-shadow: @black;
-}
-
-/* The whole bar */
-#waybar {
-	background: rgba(20, 20, 20, 0.85);
-	color: @white;
-/*	font-family: Iosevka; */
-	font-family: Segoe-UI-Variable;
-	font-size: 10pt;
+	font-family: Iosevka;
 	font-weight: bold;
+	font-size: 10pt;
 }
 
-/* Each module */
-#battery,
+	/* The Whole Bar */
+#waybar {
+	background: rgba(29, 32, 33, 0.96);	
+	color: @white;
+	border: 1px solid #ffffff;
+}
+
+	/* Standard Modules */
 #clock,
 #date,
+#battery,
 #cpu,
-#language,
 #memory,
-#mode,
+#temperature,
+#disk,
 #network,
 #pulseaudio,
-#temperature,
+#backlight,
 #tray,
+#language,
+#user,
+#mode,
+#idle_inhibitor,
+#tooltip,
+
+#mode {
+    color: #cc3436;
+    font-weight: bold;
+}
+#idle_inhibitor {
+    padding: 0 10px;
+}
 tooltip {
-	background: rgba(20, 20, 20, 0.85);
+	background: rgba(28, 28, 28, 0.85);
+	color: @white;
 }
 tooltip label {
+	background: rgba(28, 28, 28, 0.8);
 	color: white;
 }
-#backlight,
-#idle_inhibitor,
-#disk,
-#user,
-#mpris {
-	padding-left: 6pt;
-	padding-right: 6pt;
-}
 
-/* Each critical module */
-#mode,
+	/* Critical Modules */
 #memory.critical,
 #cpu.critical,
 #temperature.critical,
@@ -145,16 +100,13 @@ tooltip label {
 	color: @warning;
 }
 
-#mode {
-	color: @white;
-	background: @mode;
-}
-
 /* Workspaces stuff */
 #workspaces button {
 	font-weight: bold;
 	padding-left: 2pt;
 	padding-right: 2pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
 	color: @white;
 	background: transparent;
 }
@@ -162,24 +114,24 @@ tooltip label {
 /* Inactive (on unfocused output) */
 #workspaces button.visible {
 	color: @white;
-	background: transparent;
+	background: @black;
 }
 
 /* Active (on focused output) */
 #workspaces button.active {
-	color: @white;
-	background: transparent;
+	color: @black;
+	background: @white;
 }
 
 /* Contains an urgent window */
 #workspaces button.urgent {
 	color: @black;
-	background: @warning;
+	background: @yellow;
 }
 
 /* Style when cursor is on the button */
 #workspaces button:hover {
-	background: @winhighlight;
+	background: @bg1;
 	color: @white;
 }
 
@@ -194,7 +146,8 @@ tooltip label {
 }
 
 #pulseaudio:hover {
-  background-color: @winhighlight;
+	background: @bg1;
+	color: @white;
 }
 
 #network {
@@ -203,17 +156,18 @@ tooltip label {
 }
 
 #network:hover {
-  background-color: @winhighlight;
+	background: @bg1;
+	color: @white;
 }
 
 #memory {
-
 	background: @memory;
 	color: @white;
 }
 
 #memory:hover {
-  background-color: @winhighlight;
+	background: @bg1;
+	color: @white;
 }
 
 #cpu {
@@ -222,7 +176,8 @@ tooltip label {
 }
 
 #cpu:hover {
-  background-color: @winhighlight;
+	background: @bg1;
+	color: @white;
 }
 
 #temperature {
@@ -231,23 +186,18 @@ tooltip label {
 }
 
 #temperature:hover {
-  background-color: @winhighlight;
-}
-
-#language {
-	background: @layout;
+	background: @bg1;
 	color: @white;
 }
 
 #battery {
 	background: transparent;
 	color: @white;
-	margin-left: -2pt;
-	margin-right: -2pt;
 }
 
 #battery:hover {
-  background-color: @winhighlight;
+	background: @bg1;
+	color: @white;
 }
 
 #tray {
@@ -256,12 +206,8 @@ tooltip label {
 }
 
 #tray:hover {
-  background-color: @winhighlight;
-}
-
-#user {
-	background: @user;
-        color: @white;
+	background: @bg1;
+	color: @white;
 }
 
 #clock {
@@ -271,66 +217,19 @@ tooltip label {
 }
 
 #clock:hover {
-  background-color: @winhighlight;
+	background: @bg1;
+	color: @white;
 }
 
-#custom-weather.severe {
-    color: #eb937d;
-}
-
-#custom-weather.sunnyDay {
-    color: #c2ca76;
-}
-
-#custom-weather.clearNight {
-    color: #2b2b2a;
-}
-
-#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-    color: #c2ddda;
-}
-
-#custom-weather.rainyDay, #custom-weather.rainyNight {
-    color: #5aaca5;
-}
-
-#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
-    color: #d6e7e5;
-}
-
-#custom-weather.default {
-    color: #dbd9d8;
-}
-
-#custom-arrowL1 {
+#custom-arrowL {
 	font-size: 11pt;
-	color: @winhighlight;
+	color: transparent;
 	background: transparent;
 }
 
-#custom-arrowR1 {
+#custom-arrowR {
 	font-size: 11pt;
-	color: @winhighlight;
-	background: transparent;
-}
-
-#custom-arrowM1 {
-	font-size: 13pt;
-	color: @arrow;
-	margin-left: 12pt;
-	background: transparent;
-}
-
-#custom-arrowM2 {
-	font-size: 13pt;
-	color: @arrow;
-	margin-right: 12pt;
-	background: transparent;
-}
-
-#custom-line {
-	font-size: 14pt;
-	color: @arrow;
+	color: transparent;
 	background: transparent;
 }
 
@@ -343,7 +242,8 @@ tooltip label {
 }
 
 #custom-start:hover {
-  background-color: @winhighlight;
+	background: @bg1;
+	color: @white;
 }
 
 #custom-notifications {
@@ -355,13 +255,6 @@ tooltip label {
 }
 
 #custom-notifications:hover {
-  background-color: @winhighlight;
-}
-
-#custom-search {
-	font-size: 10pt;
-	color: @black;
-	margin-top: 2pt;
-	margin-bottom: 2pt;
-	background: #EEEEEE;
+	background: @bg1;
+	color: @white;
 }
