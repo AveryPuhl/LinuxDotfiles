@@ -2,8 +2,11 @@
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+alias vencord-install='~/bin/vencord-install'
+alias kys='shutdown now'
+alias fixaudio='~/bin/fixaudio'
 alias sudo='sudo '
-alias ChatGPT='~/bin/InitializeGPT'
+alias chatgpt='~/bin/InitializeGPT'
 alias nvmequickcheck='~/bin/nvmecheck'
 alias diskuse='du --human-readable --max-depth=1'
 alias download-audio='yt-dlp -x --audio-format best'
