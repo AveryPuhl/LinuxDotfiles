@@ -11,14 +11,11 @@ I will ***NOT*** help you if you break your system, somehow.
 *	OS: [Archlinux](https://archlinux.org/)
 * Kernel: [linux-tkg](https://github.com/Frogging-Family/linux-tkg)
 
-*Desktop Setup #1:*
+*Desktop Setup:*
 * Window Manager: [Hyprland](https://hyprland.org/)
 * Desktop Bar: [Waybar](https://github.com/Alexays/Waybar)
 * Notification Center: [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
 * Appmenu: [Rofi (Wayland Fork)](https://github.com/lbonn/rofi)
-
-*Desktop Setup #2:*
-* Desktop Environment: [KDE Plasma](https://kde.org/plasma-desktop/)
 
 *Terminal Setup:*
 * Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
