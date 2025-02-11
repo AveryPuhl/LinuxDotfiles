@@ -3,28 +3,24 @@
 /* │     Organization     │ */
 /* ╰──────────────────────╯ */
 	"layer": "bottom",
-	"position": "bottom",
-	"spacing": 3,
+	"position": "top",
+	"spacing": 2,
 	"modules-left": [
 		"hyprland/workspaces",	
-		"cpu",
-		"temperature",
-		"memory",
-		"custom/arrowL",
+		"cpu",				
+		"temperature",		
+		"memory"	
 	],
 	"modules-center": [
-		"custom/arrowR",
-		"hyprland/window",
-		"custom/arrowL",
+		"hyprland/window"
 	],
 	"modules-right": [
-		"custom/arrowR",
 		"tray",
 		"pulseaudio",
 		"battery",
 		"network",
 		"clock",
-		"custom/notifications",
+		"custom/notifications"
 	],
 // Modules
 /* ╭─────────────────╮ */
@@ -36,14 +32,14 @@
 			"warning": 34,
 			"critical": 24
 		},
-		"format-time":"{H}:{M:02}",
-		"format": "{icon} {capacity}%",
-		"format-charging": "{icon} {capacity}%",
-		"format-charging-full": "{icon} {capacity}%",
-		"format-full": "{icon} {capacity}%",
-	/*	"format-alt": "{icon} {power}W",	*/
+		"format-time":" {H}:{M:02} ",
+		"format": "  {icon} {capacity}% ",
+		"format-charging": "  {icon} {capacity}% ",
+		"format-charging-full": "  {icon} {capacity}% ",
+		"format-full": "  {icon} {capacity}% ",
+	/*	"format-alt": "  {icon} {power}W ",	*/
 		"tooltip": true,
-		"tooltip-format": "Battery",
+		"tooltip-format": " Battery level",
 		"on-click": "kitty -e 'battop'",
 		"format-icons": [
 			"",
@@ -55,14 +51,14 @@
 	},
 
 	"clock": {
-		"format": " {:%I:%M %p%n %m/%d/%Y}",
+		"format": " {:%I:%M %p%n %m/%d/%Y} ",
 		"tooltip": true,
 		"tooltip-format": "Clock", 
 	},
 	
 	"cpu": {
 		"interval": 1,
-		"format": " {usage}%",
+		"format": "   {usage}% ",
 		"states": {
 			"warning": 71,
 			"critical": 86
@@ -74,7 +70,8 @@
 
 	"memory": {
 		"interval": 1,
-		"format": " {used:0.1f}G / {total:0.1f}G",
+	/*	"format": " {used:0.1f}G / {total:0.1f}G", */
+		"format": "   {used:0.1f}G ", 
 		"on-click": "kitty -e 'htop'",
 		"tooltip": true,
 		"tooltip-format": "RAM Usage"
@@ -87,13 +84,13 @@
 		"format-disconnected": "     ",
 	/*	"format-alt": "   {ipaddr}/{cidr} ", */
 		"tooltip": true,
-		"tooltip-format": "WiFi"
+		"tooltip-format": "Network Connection"
 	},
 
 	"pulseaudio": {
-		"format": " {icon} {volume}% ",
-		"format-bluetooth": " {icon} {volume}% ",
-		"format-muted": "  ",
+		"format": "  {icon} {volume}% ",
+		"format-bluetooth": "  {icon} {volume}% ",
+		"format-muted": "    ",
 		"format-icons": {
 			"headphone": "",
 			"hands-free": "",
@@ -112,7 +109,7 @@
 	"temperature": {
 		"critical-threshold": 80,
 		"interval": 1,
-		"format": " {icon} {temperatureC}°C ",
+		"format": "  {icon} {temperatureC}°C ",
 		"format-icons": [
 			"",
 			"",
@@ -160,7 +157,7 @@
 	},
 
 	"custom/notifications": {
-		"format": "    ",
+		"format": "  ",
 		"tooltip": true,
 		"tooltip-format": "Notification Center",
 		"on-click": "swaync-client --open-panel",
@@ -173,6 +170,9 @@
 		"tooltip-format": "Search Anything",
 	},
 
+	"custom/spacer": {
+		"format": " "
+	}
 // vi:ft=jsonc
 
 },

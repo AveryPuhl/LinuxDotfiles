@@ -40,9 +40,10 @@
 
 	/* The Whole Bar */
 #waybar {
-	background: rgba(29, 32, 33, 0.96);	
+/*	background: rgba(29, 32, 33, 0.96);		*/
+	background: rgba(0, 0, 0, 0.35);
 	color: @white;
-	border: 1px solid #ffffff;
+/*	border: 1px solid #ffffff;				*/
 }
 
 	/* Standard Modules */
@@ -109,6 +110,7 @@ tooltip label {
 	padding-bottom: 2pt;
 	color: @white;
 	background: transparent;
+/*	border: 1px solid #ffffff; */
 }
 
 /* Inactive (on unfocused output) */
@@ -119,8 +121,9 @@ tooltip label {
 
 /* Active (on focused output) */
 #workspaces button.active {
-	color: @black;
-	background: @white;
+	color: @white;
+	background: transparent;
+	border: 2px solid #ffffff;
 }
 
 /* Contains an urgent window */
@@ -131,13 +134,16 @@ tooltip label {
 
 /* Style when cursor is on the button */
 #workspaces button:hover {
-	background: @bg1;
+	background: transparent;
 	color: @white;
+/*	border: @white; */
 }
 
 #window {
 	background: transparent;
 	color: @white;
+	padding-right: 2pt;
+	padding-bottom: 2pt;
 }
 
 #pulseaudio {
@@ -146,8 +152,9 @@ tooltip label {
 }
 
 #pulseaudio:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #network {
@@ -156,8 +163,9 @@ tooltip label {
 }
 
 #network:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #memory {
@@ -166,8 +174,9 @@ tooltip label {
 }
 
 #memory:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #cpu {
@@ -176,8 +185,9 @@ tooltip label {
 }
 
 #cpu:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #temperature {
@@ -186,8 +196,9 @@ tooltip label {
 }
 
 #temperature:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #battery {
@@ -196,8 +207,9 @@ tooltip label {
 }
 
 #battery:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #tray {
@@ -206,8 +218,9 @@ tooltip label {
 }
 
 #tray:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #clock {
@@ -217,8 +230,9 @@ tooltip label {
 }
 
 #clock:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #custom-arrowL {
@@ -242,8 +256,9 @@ tooltip label {
 }
 
 #custom-start:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+	border: @white;
 }
 
 #custom-notifications {
@@ -255,6 +270,11 @@ tooltip label {
 }
 
 #custom-notifications:hover {
-	background: @bg1;
+	background: rgba(200, 200, 200, 0.125);
 	color: @white;
+}
+
+#custom-spacer {
+	font-size: 13px;
+	color: transparent;
 }
