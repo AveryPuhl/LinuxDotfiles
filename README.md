@@ -1,5 +1,5 @@
 
-# *Avery Puhl's Linux Configuration*
+# *Avery Puhl's Desktop Linux Configuration*
 This contains config files and shell scripts belonging to my personal Archlinux system configuration.
 
 I ***highly*** discourage you to use my scripts (found in ~/bin). Many of these scripts are the opposite of robust (e.g hard-coded file paths, bugs, et cetera), and I cannot recommend any usage.
