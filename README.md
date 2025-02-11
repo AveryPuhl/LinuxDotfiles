@@ -25,10 +25,4 @@ I will ***NOT*** help you if you break your system, somehow.
 
 ## Previews
 
-
-Desktop:
-![image](https://github.com/user-attachments/assets/965073aa-cd74-4979-a6bf-3269c3eb9e74)
-
-
-Terminal:
-![image](https://github.com/user-attachments/assets/d55ca05e-a9e5-4692-9465-06a489a1d070)
+![image](https://github.com/user-attachments/assets/3ed5119d-6bb1-4907-86ff-621058e40d5e)
